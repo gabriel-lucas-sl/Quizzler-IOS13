@@ -43,7 +43,6 @@
                                         </state>
                                         <connections>
                                             <action selector="answerButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ICq-zB-TZ0"/>
-                                            <action selector="trueButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nGP-Xa-4RR"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tbn-vQ-GyC">
