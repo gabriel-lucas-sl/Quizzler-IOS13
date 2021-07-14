@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="dark"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
@@ -25,12 +25,40 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="fal-oS-tEg">
                                 <rect key="frame" x="20" y="44" width="374" height="818"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalCompressionResistancePriority="1000" text="Question Text" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rSI-li-mhO">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="618"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hQg-2i-1vO" userLabel="ScoreView">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="158.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4aI-p2-73T">
+                                                <rect key="frame" x="20" y="0.0" width="354" height="158.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="4aI-p2-73T" firstAttribute="top" secondItem="hQg-2i-1vO" secondAttribute="top" id="aG4-jC-fCf"/>
+                                            <constraint firstItem="4aI-p2-73T" firstAttribute="leading" secondItem="hQg-2i-1vO" secondAttribute="leading" constant="20" id="de0-QH-fpu"/>
+                                            <constraint firstAttribute="bottom" secondItem="4aI-p2-73T" secondAttribute="bottom" id="p4P-Hd-ekd"/>
+                                            <constraint firstAttribute="trailing" secondItem="4aI-p2-73T" secondAttribute="trailing" id="rX9-Zj-MwI"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0K3-xK-eLA" userLabel="QuestionView">
+                                        <rect key="frame" x="0.0" y="168.5" width="374" height="449.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalCompressionResistancePriority="1000" text="Question Text" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rSI-li-mhO">
+                                                <rect key="frame" x="10" y="0.0" width="364" height="449.5"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="rSI-li-mhO" secondAttribute="trailing" id="Otg-8u-24t"/>
+                                            <constraint firstAttribute="bottom" secondItem="rSI-li-mhO" secondAttribute="bottom" id="XT7-TN-aai"/>
+                                            <constraint firstItem="rSI-li-mhO" firstAttribute="top" secondItem="0K3-xK-eLA" secondAttribute="top" id="lZl-xs-isi"/>
+                                            <constraint firstItem="rSI-li-mhO" firstAttribute="leading" secondItem="0K3-xK-eLA" secondAttribute="leading" constant="10" id="tqz-Qa-I5g"/>
+                                        </constraints>
+                                    </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oVw-Hl-IRe">
                                         <rect key="frame" x="0.0" y="628" width="374" height="80"/>
                                         <constraints>
@@ -88,6 +116,7 @@
                         <outlet property="falseButton" destination="tbn-vQ-GyC" id="Mmj-IA-jRA"/>
                         <outlet property="progressBar" destination="TXm-qh-7Xg" id="ZUH-0k-HFn"/>
                         <outlet property="questionLabel" destination="rSI-li-mhO" id="cFl-Ov-emX"/>
+                        <outlet property="scoreLabel" destination="4aI-p2-73T" id="te0-2Y-Tcr"/>
                         <outlet property="trueButton" destination="oVw-Hl-IRe" id="eGq-bG-qo5"/>
                     </connections>
                 </viewController>
