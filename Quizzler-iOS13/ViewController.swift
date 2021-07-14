@@ -10,11 +10,21 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    @IBOutlet weak var questionLabel: UILabel!
+    @IBOutlet weak var progressBar: UIProgressView!
+    @IBOutlet weak var trueButton: UIButton!
+    @IBOutlet weak var falseButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        questionLabel.text = "Creating a new variable that will receives the content of an Optional in which, both of them are inside of an if statement. Is this a safe way to get an Optional data?"
+        
     }
-
+    
+    @IBAction func answerButtonPressed(_ sender: UIButton) {
+    
+    }
 
 }
 
