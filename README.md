@@ -5,7 +5,14 @@ This is a little project that I developed in the nine section of Angela Yu's IOS
 
 ## What I built
 
+### Quizzler Project
+
 https://user-images.githubusercontent.com/61299646/125567619-d395ea03-2ab8-4f3f-8719-d3ae501fab59.mov
+
+### Challenge Project
+
+https://user-images.githubusercontent.com/61299646/125726948-4b60ab6d-f2b5-4596-b58d-50e61f20b5bf.mov
+
 
 ## What I learned
 
